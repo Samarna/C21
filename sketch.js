@@ -1,28 +1,21 @@
+var wall;
+var bullet;
+var width;
+var 
+
 function setup() {
-  createCanvas(800,800);
-  fixedRect = createSprite(400, 200, 80, 50);
-  fixedRect.shapeColor = "blue";
-  fixedRect.debug = true;
-  movingRect = createSprite(400,200,80,30);
-  movingRect.shapeColor = "blue";
-  movingRect.debug = true;
+  createCanvas(1600,400);
+   bullet = createSprite(200, 200, 20, 20);
+   bullet.shapeColor = "white";
+  
+   wall = createSprite(1500, 200, width, 400);
+   wall.shapeColor = (80,80,80);
 }
 
 function draw() {
-  background(255,255,255);
-  movingRect.bo
-  movingRect.x = mouseX;
-  movingRect.y = mouseY;
-  if(movingRect.x - fixedRect.x < movingRect.width/2 + fixedRect.width/2
-  && fixedRect.x - movingRect.x < movingRect.width/2 + fixedRect.width/2
-  && movingRect.y - fixedRect.y < movingRect.height/2 + fixedRect.height/2
-  && fixedRect.y - movingRect.y < movingRect.height/2 + fixedRect.height/2){
-    movingRect.shapeColor = "green";
-    fixedRect.shapeColor = "green";
-  }else{
-    movingRect.shapeColor = "blue";
-    fixedRect.shapeColor = "blue";
-  }
-
+background("grey");
+  width = Math.round(randomNumber(22,83));
+  speed = Math.round(randomNumber(223,321));
+  
   drawSprites();
 }
