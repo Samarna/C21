@@ -1,1 +1,18 @@
 class bullet{
+constructor(x, y, width, height, angle) {
+        this.body = Bodies.rectangle(x, y, 20, 20);
+        this.width = 20;
+        this.height = 20;
+        World.add(world, this.body);
+      }
+      display(){
+        var angle = this.body.angle;
+        push();
+        translate(this.body.position.x, this.body.position.y);
+        rotate(angle);
+        rectMode(CENTER);
+        fill("white")
+        rect(this.image, 0, 0, this.width, this.height);
+        pop();
+      }
+}
