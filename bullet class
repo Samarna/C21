@@ -1,18 +1,11 @@
-class bullet{
-constructor(weight, speed) {
-        this.body = Bodies.rectangle(200, 200, 20, 20);
-        this.width = 20;
-        this.height = 20;
-        World.add(world, this.body);
-      }
-      display(){
-        var angle = this.body.angle;
-        push();
-        translate(this.body.position.x, this.body.position.y);
-        rotate(angle);
-        rectMode(CENTER);
-        fill("white")
-        rect(this.image, 0, 0, this.width, this.height);
-        pop();
-      }
+class Bullet {
+  constructor(weight,speed){
+  this.x = 50;
+  this.y =200;
+  this.sprite = createSprite(this.x,this.y,50,50);
+  this.weight = weight;
+  this.speed = speed;
+  this.sprite.velocityX = speed;
+  this.sprite.shapeColor = (225);
+  }
 }
