@@ -3,6 +3,7 @@ var bullet;
 var width;
 var speed;
 var weight;
+var damage;
 
 function setup() {
   createCanvas(1600,400);
