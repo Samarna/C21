@@ -12,7 +12,7 @@ function setup() {
    wall = createSprite(1500, 200, width, 400);
    wall.shapeColor = (80,80,80);
   
-  bullet = new bullet class(weight,speed);
+  bullet = new Bullet(weight,speed);
   
   width = Math.round(randomNumber(22,83));
   weight = Math.round(randomNumber(30,52));
