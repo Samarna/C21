@@ -9,19 +9,22 @@ var damage;
 
 function setup() {
   createCanvas(1600,400);
-   wall = createSprite(1500, 200, width, 400);
-   wall.shapeColor = (80,80,80);
 
   width = Math.round(random(22,83));
   weight = Math.round(random(30,52));
   speed = Math.round(random(223,321));
-    
+
+  wall = createSprite(1200, 200, width, 400);
+  console.log(width);
+  wall.shapeColor = color(80,80,80);
+
   bullet = new Bullet(weight,speed);
 }
 
 function draw() {
 background("grey");
-  damage = 0.5*weight*speed*speed/width*width*width;
+  damage = 0.5*bullet.weight*bullet.speed*bullet.speed/width*width*width;
+  console.log(damage);
   
   if(damage<10){
     wall.shapeColor = "green";
