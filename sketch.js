@@ -12,9 +12,9 @@ function setup() {
    wall = createSprite(1500, 200, width, 400);
    wall.shapeColor = (80,80,80);
 
-  width = Math.round(randomNumber(22,83));
-  weight = Math.round(randomNumber(30,52));
-  speed = Math.round(randomNumber(223,321));
+  width = Math.round(random(22,83));
+  weight = Math.round(random(30,52));
+  speed = Math.round(random(223,321));
     
   bullet = new Bullet(weight,speed);
 }
