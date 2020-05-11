@@ -22,7 +22,7 @@ function setup() {
 
 function draw() {
 background("grey");
-  if(hasCollided(bullet,wall){
+  if(hasCollided(bullet,wall)){
     var damage = 0.5*bullet.weight*bullet.speed*bullet.speed/(thickness*thickness*thickness);
   
     if(damage<10){
