@@ -35,7 +35,7 @@ background("grey");
   drawSprites();
 }
 function hasCollided(lbullet,lwall){
-  bulletRightEdge = lbullet.x + lbullet.width;
+  bulletRightEdge = lbullet.sprite.x + lbullet.sprite.width
   wallLeftEdge = lwall.x;
   if(bulletRightEdge >= wallLeftEdge){
     return true
