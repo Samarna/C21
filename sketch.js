@@ -25,6 +25,8 @@ background("grey");
   if(hasCollided(bullet,wall)){
     var damage = 0.5*bullet.weight*bullet.speed*bullet.speed/(thickness*thickness*thickness);
   
+    bullet.sprite.velocityX = 0;
+    
     if(damage<10){
       wall.shapeColor = color(255,0,0);
     }
